@@ -12,7 +12,8 @@
   background-color: #000000;
   overflow: hidden;
   z-index: 9999;
-  contain: layout style paint;
+  contain: strict;
+  content-visibility: auto;
 }
 
 .netflix-intro {
@@ -114,7 +115,7 @@
   background-color: #0077ff;
   width: 100%;
   height: 70%;
-  box-shadow: 0px 0px 29px 24px #0077ff;
+  filter: blur(12px);
   will-change: transform;
   transform: translate3d(0, 0, 0);
 }
@@ -163,9 +164,9 @@
   position: absolute;
   display: block;
   height: 100%;
-  box-shadow: 0px 0px 10px 0px rgba(0, 119, 255, 0.75);
   background: var(--color);
-  will-change: transform;
+  filter: blur(4px);
+  will-change: transform, opacity;
   transform: translate3d(0, 0, 0);
 }
 
@@ -176,8 +177,8 @@
   width: 100%;
   height: 100%;
   background: var(--color);
-  box-shadow: 0px 0px 10px 0px rgba(0, 119, 255, 0.75);
-  will-change: transform;
+  filter: blur(4px);
+  will-change: transform, opacity;
   transform: translate3d(0, 0, 0);
 }
 
