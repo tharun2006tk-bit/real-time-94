@@ -86,19 +86,19 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-16 sm:py-20 text-center">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 animate-fade-in font-cinematic tracking-wide">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 animate-fade-in font-cinematic tracking-wide px-4">
           Welcome to{' '}
           <span className="block mt-1 sm:mt-2">
             IN<span className="text-primary text-glow">TEMS</span>TELLAR 2025
           </span>
         </h1>
-        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 sm:mb-12 animate-fade-in px-4">
+        <p className="text-lg sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 sm:mb-12 animate-fade-in px-4">
           An IEEE TEMS Symposium Experience
         </p>
 
         {/* Event Carousel */}
         <div className="relative max-w-6xl mx-auto mt-8 sm:mt-12 md:mt-16">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 px-4">Featured Events</h2>
+          <h2 className="text-2xl sm:text-2xl md:text-3xl font-bold mb-6 sm:mb-6 md:mb-8 px-4">Featured Events</h2>
           
           <div className="relative">
             <Button
@@ -114,7 +114,7 @@ const Hero = () => {
               ref={scrollRef}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              className="flex gap-3 sm:gap-6 overflow-x-auto scrollbar-hide px-4 sm:px-12"
+              className="flex gap-4 sm:gap-6 overflow-x-auto scrollbar-hide px-4 sm:px-12"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {/* Duplicate events for infinite loop effect */}
@@ -122,7 +122,7 @@ const Hero = () => {
                 <div
                   key={`${event.id}-${index}`}
                   onClick={scrollToEvents}
-                  className="flex-shrink-0 w-40 sm:w-72 md:w-80 lg:w-96 cursor-pointer group"
+                  className="flex-shrink-0 w-full sm:w-72 md:w-80 lg:w-96 cursor-pointer group"
                 >
                   <div className="relative overflow-hidden rounded-lg shadow-card hover:shadow-glow transition-all duration-300 transform group-hover:scale-105">
                     <img
