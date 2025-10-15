@@ -122,14 +122,14 @@ const Hero = () => {
                 <div
                   key={`${event.id}-${index}`}
                   onClick={scrollToEvents}
-                  className="flex-shrink-0 w-full sm:w-72 md:w-80 lg:w-96 cursor-pointer group"
+                  className="flex-shrink-0 cursor-pointer group"
                 >
                   <div className="relative overflow-hidden rounded-lg shadow-card hover:shadow-glow transition-all duration-300 transform group-hover:scale-105">
                     <img
                       src={event.image}
                       alt={event.title}
                       loading="eager"
-                      className="w-full h-auto object-cover"
+                      className="w-auto h-auto max-w-full object-contain"
                     />
                   </div>
                 </div>
