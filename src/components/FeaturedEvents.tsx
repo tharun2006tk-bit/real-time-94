@@ -69,21 +69,21 @@ const EventFlipCard = ({ event }: { event: EventCard }) => {
 
   return (
     <div
-      className="relative h-[600px] sm:h-[650px] md:h-[700px] perspective-1000 cursor-pointer"
+      className="relative perspective-1000 cursor-pointer"
       onClick={() => setIsFlipped(!isFlipped)}
     >
       <div
-        className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
+        className={`relative w-full transition-transform duration-700 transform-style-3d ${
           isFlipped ? 'rotate-y-180' : ''
         }`}
       >
         {/* Front */}
-        <div className="absolute inset-0 backface-hidden rounded-xl overflow-hidden shadow-card hover:shadow-glow transition-shadow">
+        <div className="backface-hidden rounded-xl overflow-hidden shadow-card hover:shadow-glow transition-shadow">
           <img
             src={event.poster}
             alt={event.name}
             loading="lazy"
-            className="w-full h-full object-contain bg-black"
+            className="w-full h-auto object-contain bg-black"
           />
         </div>
 
