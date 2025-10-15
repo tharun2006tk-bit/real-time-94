@@ -69,11 +69,11 @@ const EventFlipCard = ({ event }: { event: EventCard }) => {
 
   return (
     <div
-      className="relative h-[600px] sm:h-[650px] md:h-[700px] perspective-1000 cursor-pointer"
+      className="relative perspective-1000 cursor-pointer"
       onClick={() => setIsFlipped(!isFlipped)}
     >
       <div
-        className={`relative w-full h-full transition-transform duration-700 transform-style-3d ${
+        className={`relative w-full transition-transform duration-700 transform-style-3d ${
           isFlipped ? 'rotate-y-180' : ''
         }`}
       >
@@ -83,12 +83,12 @@ const EventFlipCard = ({ event }: { event: EventCard }) => {
             src={event.poster}
             alt={event.name}
             loading="lazy"
-            className="w-full h-full object-contain bg-black"
+            className="w-full h-auto object-contain bg-black"
           />
         </div>
 
         {/* Back */}
-        <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl overflow-hidden glass shadow-card p-6 sm:p-8 flex flex-col justify-between">
+        <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-xl overflow-hidden glass shadow-card p-6 sm:p-8 flex flex-col justify-between min-h-[600px]">
           <div>
             <h3 className="text-xl sm:text-2xl font-bold mb-4">{event.name}</h3>
             <p className="text-primary text-lg sm:text-xl mb-6 italic">{event.tagline}</p>
